@@ -1,0 +1,3 @@
+# Shell Script Bug: Finding the Largest File
+
+This repository demonstrates a subtle bug in a shell script designed to find the largest file within a given directory.  The script uses `find` to locate files and their sizes, then `sort` to order them, and finally `head` to select the largest.  However, the `find` command might encounter issues with very large files due to integer overflow, especially if the file size exceeds the maximum value representable by the system's integer type. The solution corrects this using `awk` to handle arbitrarily large file sizes.
